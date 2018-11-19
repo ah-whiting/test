@@ -1,0 +1,129 @@
+Author: Alex W <runthesun@gmail.com>
+Date:   Mon Nov 19 14:20:06 2018 -0800
+
+    text.txt, css reset to style.css
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git log -p -1
+commit 292bc6cf53eec3dec762c9a4ec68e4c649dfc1dc (HEAD -> master)
+Author: Alex W <runthesun@gmail.com>
+Date:   Mon Nov 19 14:20:06 2018 -0800
+
+    text.txt, css reset to style.css
+
+diff --git a/style.css b/style.css
+index e69de29..e01402d 100644
+--- a/style.css
++++ b/style.css
+@@ -0,0 +1,4 @@
++* {
++    padding:0px;
++    margin:0px;
++}
+\ No newline at end of file
+diff --git a/text.txt b/text.txt
+new file mode 100644
+index 0000000..f9b747d
+--- /dev/null
++++ b/text.txt
+@@ -0,0 +1,181 @@
++ diff --git a/index.html b/index.html
++> index e69de29..388d33f 100644
++> --- a/index.html
++> +++ b/index.html
++> @@ -0,0 +1,14 @@
++> +<!DOCTYPE html>
+++<html>
+++<head>
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.42 KiB | 1.42 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/ah-whiting/test.git
+   faeaded..292bc6c  master -> master
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ ls
+index.html  main.js  style.css  text.txt
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From https://github.com/ah-whiting/test
+   292bc6c..f31fb1e  master     -> origin/master
+Updating 292bc6c..f31fb1e
+Fast-forward
+ README.md      | 2 ++
+ testfile2.html | 1 +
+ 2 files changed, 3 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 testfile2.html
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ ls
+index.html  main.js  README.md  style.css  testfile2.html  text.txt
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ ^C
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$
