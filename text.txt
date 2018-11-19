@@ -1,0 +1,181 @@
+ diff --git a/index.html b/index.html
+> index e69de29..388d33f 100644
+> --- a/index.html
+> +++ b/index.html
+> @@ -0,0 +1,14 @@
+> +<!DOCTYPE html>
++<html>
++<head>
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git log -p -2
+commit f6fbfbbd01ad4e039aae76c570b87606167f7c76 (HEAD -> master)
+Author: Alex W <runthesun@gmail.com>
+bash: !DOCTYPE: event not found
+> +<html>
+> +<head>
+>
+> Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+> $ git log -p -2
+> commit f6fbfbbd01ad4e039aae76c570b87606167f7c76 (HEAD -> master)
+> Author: Alex W <runthesun@gmail.com>
+> Date:   Mon Nov 19 13:28:33 2018 -0800
+>
+>     update css
+>
+> diff --git a/style.css b/style.css
+> index e69de29..411ad70 100644
+> --- a/style.css
+> +++ b/style.css
+> @@ -0,0 +1,4 @@
+> +* {
+> +    padding:0px;
+> +    margin:0px;
+> +}
+>
+> commit f166bdbbe9200b253bc5b920c5eb39cf7bf69b28
+> Author: Alex W <runthesun@gmail.com>
+> Date:   Mon Nov 19 13:13:54 2018 -0800
+    added actual html
+>
+>     added actual html
+>
+> diff --git a/index.html b/index.html
+> index e69de29..388d33f 100644
+> --- a/index.html
+> +++ b/index.html
+> @@ -0,0 +1,14 @@
+> +<!DOCTYPE html>
+bash: !DOCTYPE: event not found
+> +<html>
+> +<head>
+>
+> Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+> $ git log -p -1
+> commit f6fbfbbd01ad4e039aae76c570b87606167f7c76 (HEAD -> master)
+> Author: Alex W <runthesun@gmail.com>
+> Date:   Mon Nov 19 13:28:33 2018 -0800
+>
+>     update css
+>
+> diff --git a/style.css b/style.css
+> index e69de29..411ad70 100644
+> --- a/style.css
+> +++ b/style.css
+> @@ -0,0 +1,4 @@
+> +* {
+> +    padding:0px;
+> +    margin:0px;
+> +}
+>
+> Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+> $ git revert
+> usage: git revert [<options>] <commit-ish>...
+>    or: git revert <subcommand>
+>
+>     --quit                end revert or cherry-pick sequence
+>     --continue            resume revert or cherry-pick sequence
+>     --abort               cancel revert or cherry-pick sequence
+>     -n, --no-commit       don't automatically commit
+>     -e, --edit            edit the commit message
+>     -s, --signoff         add Signed-off-by:
+>     -m, --mainline <parent-number>
+>                           select mainline parent
+>     --rerere-autoupdate   update the index with reused conflict resolution if possible
+>     --strategy <strategy>
+>                           merge strategy
+>     -X, --strategy-option <option>
+>                           option for merge strategy
+>     -S, --gpg-sign[=<key-id>]
+>                           GPG sign commit
+>
+>
+> Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+> $ git log
+> commit f6fbfbbd01ad4e039aae76c570b87606167f7c76 (HEAD -> master)
+> Author: Alex W <runthesun@gmail.com>
+> Date:   Mon Nov 19 13:28:33 2018 -0800
+>
+>     update css
+>
+> commit f166bdbbe9200b253bc5b920c5eb39cf7bf69b28
+> Author: Alex W <runthesun@gmail.com>
+> Date:   Mon Nov 19 13:13:54 2018 -0800
+>
+>     added actual html
+>
+> commit 9fba2926e405f4ce01eeba3905b0e060ad404ccb
+> Date:   Mon Nov 19 13:06:24 2018 -0800
+
+    initial commit
+
+Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+$ git revert
+usage: git revert [<options>] <commit-ish>...
+Author: Alex W <runthesun@gmail.com>
+> Date:   Mon Nov 19 13:06:24 2018 -0800
+>
+>     initial commit
+>
+> Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+> $ git revert
+> usage: git revert [<options>] <commit-ish>...
+>    or: git revert <subcommand>
+>
+>     --quit                end revert or cherry-pick sequence
+>     --continue            resume revert or cherry-pick sequence
+>     --abort               cancel revert or cherry-pick sequence
+>     -n, --no-commit       don't automatically commit
+>     -e, --edit            edit the commit message
+>     -s, --signoff         add Signed-off-by:
+>     -m, --mainline <parent-number>
+>                           select mainline parent
+>     --rerere-autoupdate   update the index with reused conflict resolution if possible
+>     --strategy <strategy>
+>                           merge strategy
+>     -X, --strategy-option <option>
+>                           option for merge strategy
+>     -S, --gpg-sign[=<key-id>]
+>                           GPG sign commit
+>
+>
+> Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+> $ get revert HEAD
+> bash: get: command not found
+>
+> Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+> $ git revert HEAD
+> hint: Waiting for your editor to close the file...
+> [master faeaded] Revert "update css"
+>  1 file changed, 4 deletions(-)
+>
+> Alex@Tang MINGW64 ~/Desktop/dojo/git/Test (master)
+> $ git log
+> commit faeaded6914af614820f93e8f53bd5e4ab80a650 (HEAD -> master)
+> Author: Alex W <runthesun@gmail.com>
+> Date:   Mon Nov 19 13:31:16 2018 -0800
+>
+>     Revert "update css"
+>
+>     This reverts commit f6fbfbbd01ad4e039aae76c570b87606167f7c76.
+>
+> commit f6fbfbbd01ad4e039aae76c570b87606167f7c76
+> Author: Alex W <runthesun@gmail.com>
+> Date:   Mon Nov 19 13:28:33 2018 -0800
+>
+>     update css
+>
+> commit f166bdbbe9200b253bc5b920c5eb39cf7bf69b28
+> Author: Alex W <runthesun@gmail.com>
+> Date:   Mon Nov 19 13:13:54 2018 -0800
+>     added actual html
+
+>     added actual html
+>
+> commit 9fba2926e405f4ce01eeba3905b0e060ad404ccb
+> Author: Alex W <runthesun@gmail.com>
+> Date:   Mon Nov 19 13:06:24 2018 -0800
+>
+>     initial commit
+>
+> Alex@Tang MINGW64 ~/Desktop/dojo/git/Test " > text.txt
